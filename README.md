@@ -17,6 +17,16 @@ Das Frontend ruft `antrag_pruefen` über XML-RPC im Server auf.
 
 ## Aufgaben
 
-1. Erklären Sie die Ausgabe des Clients: Welche Funktionen bietet der Server an, welches Ergebnis liefert `antrag_pruefen` für die beiden Anträge, und welchen Typ hat es?
-2. Suchen Sie im TCP Stream den Funktionsnamen, die beiden Felder des Antrags und das Ergebnis. Notieren Sie, wie Name, Feldnamen, Werte und Typen in der Nachricht dargestellt werden.
-3. Was weiß der Client nach dem ersten Lauf in Schritt 4 über den Antrag von Erika Mustermann? Was ist durch den zweiten Lauf im Server entstanden? Warum kann das bei einem lokalen Funktionsaufruf nicht passieren?
+Nach Schritt 2:
+
+1. Welche Zeile im Client erzeugt den Client Stub? Welche Zeile im Server macht `antrag_pruefen()` von außen aufrufbar?
+2. Erklären Sie die Ausgabe des Clients: Welche Funktionen bietet der Server an, welches Ergebnis liefert `antrag_pruefen()` für die beiden Anträge, und welchen Typ hat es?
+
+Nach Schritt 3:
+
+3. Suchen Sie den Funktionsnamen, die beiden Felder des Antrags und das Ergebnis. Wie sind Funktionsname, Feldnamen, Werte und Typen in der Nachricht dargestellt?
+
+Nach Schritt 4:
+
+4. Was weiß der Client nach dem ersten Lauf über den Antrag von Erika Mustermann?
+5. Was ist durch den zweiten Lauf im Server entstanden?
