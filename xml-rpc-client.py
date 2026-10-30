@@ -3,7 +3,11 @@
 # Der Client enthält das Frontend des Antragsverfahrens.
 # Business-Logik und Datenhaltung laufen im Server (xml-rpc-server.py).
 
+import socket
 import xmlrpc.client
+
+# der Client wartet höchstens 5 Sekunden auf eine Response (Timeout)
+socket.setdefaulttimeout(5)
 
 # Verbindung zum Server herstellen
 # Der ServerProxy ist der Client Stub: Aufrufe an remote werden als Nachricht an den Server gesendet
@@ -16,10 +20,13 @@ print(remote.system.listMethods())
 
 # Frontend
 def antrag_einreichen(eingaben):
-   # sieht aus wie ein lokaler Aufruf, die Funktion läuft aber im Server
-   ergebnis = remote.antrag_pruefen(eingaben)
-   print(ergebnis)
-   print(type(ergebnis))
+   try:
+      # sieht aus wie ein lokaler Aufruf, die Funktion läuft aber im Server
+      ergebnis = remote.antrag_pruefen(eingaben)
+      print(ergebnis)
+      print(type(ergebnis))
+   except TimeoutError:
+      print("keine Response nach 5 Sekunden:", eingaben)
 
 
 antrag_einreichen({"name": "Erika Mustermann", "anliegen": "Wohnsitz ummelden"})

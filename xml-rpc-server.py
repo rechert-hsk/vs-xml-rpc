@@ -8,6 +8,8 @@
 
 # Die Python Bibliothek xmlrpc liefert schon fertige Server-Komponenten
 # Diese müssen mittels des import ins Program integriert werden
+import sys
+import time
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
 
@@ -18,6 +20,10 @@ class RequestHandler(SimpleXMLRPCRequestHandler):
    rpc_paths = ('/endpunkt',)
 
 
+# Verzögerung der Response in Sekunden, für den Versuch: python xml-rpc-server.py 8
+verzoegerung = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+
+
 # Datenhaltung
 # Die Anträge liegen nur im Speicher des Servers und gehen beim Beenden verloren
 antraege = {}
@@ -25,6 +31,7 @@ antraege = {}
 def antrag_speichern(antrag):
    nummer = f"A-{len(antraege) + 1:04d}"
    antraege[nummer] = antrag
+   print("gespeichert:", nummer, antrag)
    return nummer
 
 
@@ -37,6 +44,8 @@ def antrag_pruefen(antrag):
    if not vollstaendig(antrag):
       return "unvollständig"
    nummer = antrag_speichern(antrag)
+   # der Antrag ist gespeichert, die Response kommt aber erst nach der Verzögerung
+   time.sleep(verzoegerung)
    return "eingegangen: " + nummer
 
 
