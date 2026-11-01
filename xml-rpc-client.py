@@ -10,7 +10,10 @@ import xmlrpc.client
 socket.setdefaulttimeout(5)
 
 # Verbindung zum Server herstellen
-# Der ServerProxy ist der Client Stub: Aufrufe an remote werden als Nachricht an den Server gesendet
+# Der ServerProxy ist der Client Stub. Er ersetzt die selbst geschriebene
+# Funktion antrag_pruefen() am Arbeitsplatz: Er schreibt Funktionsname und
+# Parameter in eine Nachricht (Marshalling), sendet sie als Request und
+# wartet auf die Response.
 # Der Server muss bereits gestartet sein, sonst kommt es zu einem Fehler
 remote = xmlrpc.client.ServerProxy('http://localhost:12345/endpunkt')
 
@@ -21,7 +24,7 @@ print(remote.system.listMethods())
 # Frontend
 def antrag_einreichen(eingaben):
    try:
-      # sieht aus wie ein lokaler Aufruf, die Funktion läuft aber im Server
+      # sieht aus wie ein lokaler Aufruf; die Funktion läuft aber im Server
       ergebnis = remote.antrag_pruefen(eingaben)
       print(ergebnis)
       print(type(ergebnis))

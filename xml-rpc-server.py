@@ -52,14 +52,17 @@ def antrag_pruefen(antrag):
 # Der Server wird auf localhost Port 12345 gestartet und nutzt der o.g. RequestHandler
 with SimpleXMLRPCServer(('localhost', 12345), requestHandler=RequestHandler) as server:
 
-   # publizieren der Funktion unter einem selbst gewählten Namen
-   # nur antrag_pruefen ist von außen aufrufbar, antrag_speichern bleibt intern
+   # Der Server Stub ruft nur registrierte Funktionen auf. Er wählt die
+   # Funktion über den Namen in der Nachricht aus, wie das if im Pseudocode.
+   # antrag_speichern() bleibt intern und ist von außen nicht aufrufbar.
    server.register_function(antrag_pruefen, 'antrag_pruefen')
 
    # wir registrieren zusätzliche Funktionen, die uns über die verfügbaren Funktionen des Servers informieren
    # system.listMethods, system.methodHelp and system.methodSignature
    server.register_introspection_functions()
 
-   # der Server wird gestartet und wartet auf Anfragen
+   # Die Schleife des Server Stub: Nachricht empfangen, Funktion aufrufen,
+   # Ergebnis als Response zurücksenden (Unmarshalling und Marshalling
+   # übernimmt die Bibliothek)
    print("Server läuft auf http://localhost:12345/endpunkt (Beenden mit Strg+C)")
    server.serve_forever()

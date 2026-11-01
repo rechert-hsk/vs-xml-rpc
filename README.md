@@ -17,17 +17,15 @@ Das Frontend ruft `antrag_pruefen` über XML-RPC im Server auf.
 
 ## Aufgaben
 
-Nach Schritt 2:
-
-1. Welche Zeilen übernehmen die Aufgabe Ihres Pseudocodes aus der Vorlesung? Ordnen Sie zu: die Funktion `antrag_pruefen` am Arbeitsplatz und die Schleife im Rechenzentrum.
+Die Kommentare im Code zeigen, welche Zeilen Client Stub und Server Stub bilden.
 
 Nach Schritt 3:
 
-2. Öffnen Sie eine Nachricht mit *Follow › TCP Stream*. Der Server Stub muss erkennen, welche Funktion gemeint ist, welcher Wert zu welchem Feld gehört und welchen Typ jeder Wert hat. Markieren Sie im Request die Stellen, an denen er das erkennt.
+1. Öffnen Sie eine Nachricht mit *Follow › TCP Stream*. Der Server Stub muss erkennen, welche Funktion gemeint ist, welcher Wert zu welchem Feld gehört und welchen Typ jeder Wert hat. Markieren Sie im Request die Stellen, an denen er das erkennt.
 
 Nach Schritt 4:
 
 Die Zahl beim Start des Servers legt fest, wie viele Sekunden er nach dem Speichern wartet, bevor er antwortet. Der Client wartet höchstens 5 Sekunden auf eine Response.
 
-3. Starten Sie den Client zweimal. Notieren Sie, was Client und Server zum Antrag von Erika Mustermann ausgeben.
-4. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
+2. Starten Sie den Client zweimal. Notieren Sie, was Client und Server zum Antrag von Erika Mustermann ausgeben.
+3. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
