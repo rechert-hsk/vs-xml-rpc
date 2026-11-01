@@ -25,7 +25,8 @@ Nach Schritt 3:
 
 Nach Schritt 4:
 
-Die Zahl beim Start des Servers legt fest, wie viele Sekunden er nach dem Speichern wartet, bevor er antwortet. Der Client wartet höchstens 5 Sekunden auf eine Response.
+Statt eines Ausfalls antwortet der Server zu spät: Er speichert den Antrag, sendet die Response aber erst nach der angegebenen Zahl von Sekunden. Der Client wartet höchstens 5 Sekunden.
 
-2. Starten Sie den Client zweimal. Notieren Sie, was Client und Server zum Antrag von Erika Mustermann ausgeben.
-3. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
+2. Starten Sie den Client. Was geben Client und Server zum Antrag von Erika Mustermann aus?
+3. Die Sachbearbeiterin sieht keine Bestätigung und sendet erneut: Starten Sie den Client noch einmal. Was gibt der Server jetzt aus?
+4. Woran hätte der Client erkennen können, dass der Server nicht ausgefallen ist?
