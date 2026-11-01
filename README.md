@@ -19,17 +19,15 @@ Das Frontend ruft `antrag_pruefen` über XML-RPC im Server auf.
 
 Nach Schritt 2:
 
-1. Welche Zeile im Client erzeugt den Client Stub? Welche Zeile im Server macht `antrag_pruefen()` von außen aufrufbar?
-2. Erklären Sie die Ausgabe des Clients: Welche Funktionen bietet der Server an, welches Ergebnis liefert `antrag_pruefen()` für die beiden Anträge, und welchen Typ hat es?
+1. Welche Zeilen übernehmen die Aufgabe der neuen Funktion `antrag_pruefen()` am Arbeitsplatz aus Ihrem Pseudocode, welche die Aufgabe der Schleife im Rechenzentrum?
 
 Nach Schritt 3:
 
-3. Suchen Sie den Funktionsnamen, die beiden Felder des Antrags und das Ergebnis. Woran erkennt der Server Stub, welchen Typ jeder Wert hat?
+2. Suchen Sie im Request den Funktionsnamen und die beiden Felder des Antrags, in der Response das Ergebnis. Was steht in der Nachricht außer den Werten selbst?
 
 Nach Schritt 4:
 
 Der Server speichert den Antrag sofort, sendet die Response aber erst nach der angegebenen Zahl von Sekunden. Der Client wartet höchstens 5 Sekunden auf eine Response.
 
-1. Starten Sie den Client. Was gibt er für den Antrag von Erika Mustermann aus? Was zeigt das Fenster des Servers?
-2. Starten Sie den Client ein zweites Mal. Was zeigt das Fenster des Servers jetzt?
-3. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
+3. Starten Sie den Client zweimal. Notieren Sie, was Client und Server zum Antrag von Erika Mustermann ausgeben.
+4. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
