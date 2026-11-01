@@ -28,5 +28,8 @@ Nach Schritt 3:
 
 Nach Schritt 4:
 
-4. Was weiß der Client nach dem ersten Lauf über den Antrag von Erika Mustermann?
-5. Was ist durch den zweiten Lauf im Server entstanden?
+Der Server speichert den Antrag sofort, sendet die Response aber erst nach der angegebenen Zahl von Sekunden. Der Client wartet höchstens 5 Sekunden auf eine Response.
+
+1. Starten Sie den Client. Was gibt er für den Antrag von Erika Mustermann aus? Was zeigt das Fenster des Servers?
+2. Starten Sie den Client ein zweites Mal. Was zeigt das Fenster des Servers jetzt?
+3. Vergleichen Sie mit Ihrer Vorhersage aus der Vorlesung: Was stimmt, was ist anders?
