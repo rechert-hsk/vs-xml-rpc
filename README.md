@@ -24,7 +24,7 @@ Nach Schritt 2:
 
 Nach Schritt 3:
 
-3. Suchen Sie den Funktionsnamen, die beiden Felder des Antrags und das Ergebnis. Wie sind Funktionsname, Feldnamen, Werte und Typen in der Nachricht dargestellt?
+3. Suchen Sie den Funktionsnamen, die beiden Felder des Antrags und das Ergebnis. Woran erkennt der Server Stub, welchen Typ jeder Wert hat?
 
 Nach Schritt 4:
 
