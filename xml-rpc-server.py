@@ -21,7 +21,7 @@ class RequestHandler(SimpleXMLRPCRequestHandler):
 
 
 # Verzögerung der Response in Sekunden, für den Versuch: python xml-rpc-server.py 8
-verzoegerung = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+verzoegerung = float(sys.argv[1]) if len(sys.argv) > 1 else 0
 
 
 # Datenhaltung
